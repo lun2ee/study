@@ -1,7 +1,6 @@
-import './App.css';
 import { useState } from 'react';
 
-function App() {
+function Example1() {
   const [channame, setChanegename] = useState('리액트');
   // 상수를 변수처럼 쓰기 위해서 useState 사용
   const onchange = (e) => {
@@ -17,4 +16,4 @@ function App() {
   );
 }
 
-export default App;
+export default Example1;
