@@ -3,12 +3,13 @@ import { RouterProvider } from 'react-router-dom';
 import studyRouter from './router';
 import MyComponent from './study/MyComponent';
 import Say from './study/Say';
+import EventPractice from './study/EventPractice';
 
 const App = () => {
   return (
     <>
       <RouterProvider router={studyRouter} />
-      <Say></Say>
+      <EventPractice></EventPractice>
     </>
   );
 };
