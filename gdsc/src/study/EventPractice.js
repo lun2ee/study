@@ -72,6 +72,8 @@ const EventPractice = () => {
   const { username, message } = form;
 
   const onChange = (e) => {
+    // input 기능
+    // 해당기능을 기능할 수 있게 호출
     const nextForm = {
       ...form,
       [e.target.name]: e.target.value,
@@ -83,14 +85,13 @@ const EventPractice = () => {
   };
 
   const onClick = () => {
+    // button 기능
     // Onclick 은 event 그 자체 그래서 e 를 안받아도 됨
     alert(username + ':' + message);
     setForm({
       username: '', // username 이 key : ''가 value 임.
       message: '', // message 이 key : ''가 value 임.
     });
-
-    //초기값으로 되돌아감. 초기화 시켜줘
   };
   const onKeyPress = (e) => {
     if (e.key === 'Enter') {
@@ -113,9 +114,10 @@ const EventPractice = () => {
         //통합되어서 OnChange 로
         onKeyPress={onKeyPress}
         // onChange={onChangeMessage()} : 렌더링 되는 순간에 호출
+        //html
       />
       {/* {{ width: 150 }} : 객체가 두래라서 중괄호 두개  */}
-      {/* const style 어쭈구 */}
+      {/* const style 어쭈구 : jsx */}
 
       <input
         type="text"
@@ -124,6 +126,7 @@ const EventPractice = () => {
         placeholder="아무거나 입력해보세어"
         style={{ width: 150 }}
         onChange={onChange}
+        //호출
         onKeyPress={onKeyPress}
       />
       <button style={{ width: 150 }} onClick={onClick}>
