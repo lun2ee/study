@@ -38,6 +38,8 @@ const IterationSample = () => {
   const onRemove = (id) => {
     const nextNames = names.filter((name) => name.id !== id);
     //부정의 부정
+    // name.id !== id 에 해당되는 객체들을 더블클릭으로 필터링 함.
+    // name.id !== id 조건이 true 인 값이 렌더링 된다. false 일때는 제거되고
     // 그냥 외우자. 제발 그냥 외워 이해안되니까 그냥 외우자.
     //4!==4 false
     //4!==5 true
