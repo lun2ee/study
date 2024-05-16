@@ -26,6 +26,7 @@ const mainRouter = [
   },
   {
     path: 'about',
+    // 하나니까 url parameter 정의 안함.
     element: (
       <Suspense fallback={Loading}>
         <About />
@@ -34,6 +35,8 @@ const mainRouter = [
   },
   {
     path: 'profiles/:username',
+    // = url parameter 정의할때 이렇게 쓴다 (외워)
+
     element: (
       <Suspense fallback={Loading}>
         <Profile />

@@ -5,16 +5,19 @@ const About = () => {
   const [searchParams, setsearchParams] = useSearchParams();
   const detail = searchParams.get('detail');
   const mode = searchParams.get('mode');
+  // 파라미터 추출
   // const location = useLocation();
 
   const onToggleDetail = () => {
     setsearchParams({ mode, detail: detail === 'true' ? false : true });
   };
+  // 파라미터 수정
 
   const onIncrease = () => {
     const nextMode = mode === null ? 1 : parseInt(mode) + 1;
     setsearchParams({ mode: nextMode, detail });
   };
+  // 파라미터 추가.
 
   return (
     <div>

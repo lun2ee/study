@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 
 //프라이빗하게 이 컴포넌트 내에서만 사용 (보안성 굿) private
 const data = {
+  // url parameter 를 받는 객체
   developer1: {
     name: '최은진',
     discription: '4학년',
@@ -16,7 +17,9 @@ const data = {
 
 const Profile = () => {
   const params = useParams();
+  //useParams 를 쓰는 방법
   const Profile = data[params.username];
+  //username 이라는 것을 data라는 컴포넌트 안의 developer 1,2의 객체를 가리키는것.
 
   return (
     <div>
