@@ -45,6 +45,7 @@ const mainRouter = [
   },
   {
     path: 'articles',
+    // url 파라미터를 articles 로 등록을 해줄게
     element: (
       <Suspense fallback={Loading}>
         <Articles />
